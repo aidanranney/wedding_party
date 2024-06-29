@@ -20,6 +20,13 @@ defmodule WeddingPartyWeb.Router do
     get "/", PageController, :home
   end
 
+  scope "/rsvp", WeddingPartyWeb do
+    pipe_through :browser
+
+    live "/", RSVPLive, :show
+    live "/:id", RSVPLive, :edit
+  end
+
   # Other scopes may use custom stacks.
   # scope "/api", WeddingPartyWeb do
   #   pipe_through :api

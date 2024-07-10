@@ -3,3 +3,29 @@
 @import "tailwindcss/utilities";
 
 /* This file is for your main application CSS */
+
+.animate-background {
+  background-size: 600%;
+
+  -webkit-animation: animation 24s linear infinite alternate-reverse forwards;
+  -moz-animation: animation 24s linear infinite alternate-reverse forwards;
+  animation: animation 24s linear infinite alternate-reverse forwards;
+}
+
+.animate-text {
+  background-size: 200%;
+
+  -webkit-animation: animation 6s linear infinite alternate forwards;
+  -moz-animation: animation 6s linear infinite alternate forwards;
+  animation: animation 6s linear infinite alternate forwards;
+}
+
+@keyframes animation {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  100% {
+    background-position: 100% 50%;
+  }
+}
